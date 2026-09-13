@@ -1,6 +1,6 @@
 import './Logo.scss'
 import classNames from 'classnames'
-import logoImgSrc from '/src/assets/images/logo.svg'
+import { getUrl } from '@/utils/getUrl'
 
 const Logo = (props) => {
   const {
@@ -12,13 +12,13 @@ const Logo = (props) => {
   return (
     <a
       className={classNames(className, 'logo')}
-      href="/"
+      href={getUrl("/")}
       title={title}
       aria-label={title}
     >
       <img
         className="logo__image"
-        src={logoImgSrc}
+        src="/src/assets/images/logo.svg"
         alt=""
         width="199"
         height="60"
