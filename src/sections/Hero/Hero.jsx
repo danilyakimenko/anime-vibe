@@ -12,7 +12,6 @@ const Hero = () => {
       aria-labelledby={titleId}
     >
       <Carousel />
-      {/*<div className="hero__pano"></div>*/}
       <div className="hero__body">
         <div className="hero__body-inner container">
           <h1 className="hero__title" id={titleId}>

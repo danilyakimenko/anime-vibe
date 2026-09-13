@@ -13,7 +13,6 @@ export const metadata = {
 export default () => {
   return (
     <>
-      {/*<Carousel />*/}
       <Hero />
       <Categories />
       <Devices />
