@@ -1,3 +1,20 @@
 .logo {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
   width: fluid(199, 116);
+
+  @include hover {
+    color: var(--color-red-60);
+  }
+
+  &__image {
+    width: fluid(70, 50);
+  }
+
+  &__title {
+    @include fluid-text(28, 18);
+
+    font-weight: 700;
+  }
 }

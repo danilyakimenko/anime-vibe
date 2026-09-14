@@ -19,11 +19,14 @@ const Logo = (props) => {
       <img
         className="logo__image"
         src="/src/assets/images/logo.svg"
-        alt=""
         width="199"
         height="60"
         loading={loading}
+        alt=""
       />
+      <span className="logo__title">
+        AnimeVibe
+      </span>
     </a>
   )
 }
