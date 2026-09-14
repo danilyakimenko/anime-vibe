@@ -1,0 +1,52 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background: var(--color-black-10);
+  animation: preloader-hide 1s
+  cubic-bezier(0.76, 0, 0.24, 1)
+  0.9s forwards;
+
+  @keyframes preloader-hide {
+    from {
+      transform: translateY(0);
+    }
+
+    to {
+      transform: translateY(100%);
+    }
+  }
+
+  &__logo {
+    @include fluid-text(96, 48);
+
+    position: relative;
+    font-weight: 700;
+
+    &-base {
+      color: var(--color-black-30);
+    }
+
+    &-light {
+      position: absolute;
+      inset: 0;
+      color: var(--color-white);
+      clip-path: inset(100% 0 0 0);
+      animation: logo-light 1s ease-out forwards;
+
+      @keyframes logo-light {
+        from {
+          clip-path: inset(100% 0 0 0);
+        }
+
+        to {
+          clip-path: inset(0 0 0 0);
+        }
+      }
+    }
+  }
+}
+
