@@ -183,7 +183,10 @@ const Carousel = () => {
   ]
 
   return (
-    <div className="carousel">
+    <div
+      className="carousel"
+      onContextMenu={(event) => event.preventDefault()}
+    >
       {/* Влево */}
       <div className="carousel__groups">
         <div className="carousel__group">
