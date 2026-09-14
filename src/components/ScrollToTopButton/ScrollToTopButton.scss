@@ -1,0 +1,22 @@
+.scroll-to-top-button {
+    @include square(56px);
+
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--color-black-15);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-duration);
+
+    &.is-visible {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+}

@@ -5,6 +5,7 @@ import Button from '@/components/Button'
 import BurgerButton from '@/components/BurgerButton'
 import menuItems from './Items/menuItems'
 import { getUrl } from '@/utils/getUrl'
+import ScrollToTopButton from '@/components/ScrollToTopButton'
 
 const Header = (props) => {
   const {
@@ -70,6 +71,7 @@ const Header = (props) => {
           }}
         />
       </div>
+      <ScrollToTopButton />
     </header>)
 }
 
