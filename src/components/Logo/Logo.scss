@@ -3,6 +3,8 @@
   align-items: center;
   column-gap: 6px;
   width: fluid(199, 116);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 
   @include hover {
     color: var(--color-red-60);
