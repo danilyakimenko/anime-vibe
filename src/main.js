@@ -7,7 +7,7 @@ import InputMaskCollection from '@/modules/InputMaskCollection'
 import SelectCollection from '@/modules/SelectCollection'
 
 // Запуск прелоадера только на главной странице
-if (window.location.pathname === '/') {
+if (window.location.pathname === '/' || '/anime-vibe/') {
   new Preloader()
 }
 new OverlayMenu()

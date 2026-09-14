@@ -10,7 +10,6 @@ class Preloader {
   constructor() {
     this.rootElement = document.querySelector(this.selectors.root)
     document.documentElement.classList.add(this.stateClasses.isLock)
-
     this.bindEvents()
   }
 
