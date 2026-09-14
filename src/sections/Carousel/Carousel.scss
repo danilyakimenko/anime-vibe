@@ -68,7 +68,7 @@
   }
 
   &__card {
-    @include square(#{fluid(290, 75)});
+    @include square(#{fluid(290, 150)});
 
     user-select: none;
     -webkit-user-select: none;
