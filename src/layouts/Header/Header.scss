@@ -89,7 +89,7 @@
     row-gap: 25px;
     padding: 16px;
     top: 60px;
-    width: 750px;
+    width: 650px;
     height: 300px;
     border: none;
     border-radius: var(--border-radius-l);
@@ -98,6 +98,10 @@
     visibility: hidden;
     transform: translateY(-10px) scale(0.98);
     transition-duration: var(--transition-duration);
+
+    @include mobile {
+      width: 90%;
+    }
 
     &[open] {
       opacity: 1;
@@ -113,6 +117,10 @@
         border-radius: var(--border-radius-m);
         padding: var(--field-padding-x);
         border: none;
+
+        &:focus-visible {
+          outline: none;
+        }
       }
 
       &__list {
@@ -126,6 +134,7 @@
 
       &__result {
         @include flex-center;
+
         flex-grow: 1;
         background-color: var(--color-black-15);
         color: var(--color-white);

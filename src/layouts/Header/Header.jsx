@@ -102,7 +102,7 @@ const Header = (props) => {
         <div className="search-menu__result">
             <span className="search-menu__title">
               An advanced search for titles is available in the
-            </span>&nbsp;&nbsp;
+            </span>&nbsp;
           <a
             className="search-menu__link"
             href="/movies"
