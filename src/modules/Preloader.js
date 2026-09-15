@@ -30,9 +30,7 @@ class Preloader {
 
   showPreloader = () => {
     sessionStorage.setItem(this.sessionStorageKey, 'true')
-
     document.documentElement.classList.add(this.stateClasses.isLock)
-
     this.bindEvents()
   }
 

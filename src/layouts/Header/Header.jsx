@@ -3,7 +3,8 @@ import Logo from '@/components/Logo'
 import classNames from 'classnames'
 import Button from '@/components/Button'
 import BurgerButton from '@/components/BurgerButton'
-import menuItems from './Items/menuItems'
+import menuItems from './items/menuItems'
+import searchItems from './items/searchItems'
 import { getUrl } from '@/utils/getUrl'
 import ScrollToTopButton from '@/components/ScrollToTopButton'
 
@@ -25,6 +26,7 @@ const Header = (props) => {
           className="header__logo"
           loading="eager"
         />
+
         <dialog
           className="header__overlay-menu-dialog"
           data-js-overlay-menu-dialog=""
@@ -47,6 +49,8 @@ const Header = (props) => {
                 </li>))}
             </ul>
           </nav>
+        </dialog>
+        <div className="header__wrapper">
           <div className="header__actions">
             <Button
               className="header__button"
@@ -54,6 +58,9 @@ const Header = (props) => {
               isLabelHidden
               mode="transparent"
               iconSrc="/src/assets/sprite/search.svg"
+              extraAttrs={{
+                'data-js-search-menu-button': ''
+              }}
             />
             <Button
               className="header__button"
@@ -63,14 +70,47 @@ const Header = (props) => {
               iconSrc="/src/assets/sprite/notifications.svg"
             />
           </div>
-        </dialog>
-        <BurgerButton
-          className="header__burger-button visible-tablet"
-          extraAttrs={{
-            'data-js-overlay-menu-burger-button': '',
-          }}
-        />
+          <BurgerButton
+            className="header__burger-button visible-tablet"
+            extraAttrs={{
+              'data-js-overlay-menu-burger-button': '',
+            }}
+          />
+        </div>
       </div>
+      <dialog
+        className="header__search-menu-dialog search-menu"
+        data-js-search-menu-dialog=""
+      >
+        <input
+          className="search-menu__input"
+          type="search"
+          placeholder="Seach titles"
+          data-js-search-menu-input=""
+        />
+        <ul className="search-menu__list">
+          {searchItems.map((searchItem, index) => (
+            <li
+              className="search-menu__item"
+              key={index}
+              data-js-search-menu-list-item=""
+            >
+              {searchItem}
+            </li>
+          ))}
+        </ul>
+        <div className="search-menu__result">
+            <span className="search-menu__title">
+              An advanced search for titles is available in the
+            </span>&nbsp;&nbsp;
+          <a
+            className="search-menu__link"
+            href="/movies"
+            title="To Catalog"
+          >catalog
+          </a>
+        </div>
+      </dialog>
       <ScrollToTopButton />
     </header>)
 }
