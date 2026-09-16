@@ -8,6 +8,37 @@ import {
 } from "minista"
 import path from 'path'
 
+const assetFileNames = (assetInfo) => {
+  const name = assetInfo.name ?? ''
+  const originalNames = assetInfo.originalFileNames ?? []
+
+  const isSprite = originalNames.some((file) =>
+    file.replaceAll('\\', '/').includes('/.minista/sprite/'),
+  )
+
+  if (name.endsWith('.css')) {
+    return 'assets/css/[name][extname]'
+  }
+
+  if (isSprite) {
+    return 'assets/sprites/[name][extname]'
+  }
+
+  if (/\.(png|jpe?g|gif|bmp|svg|webp|avif)$/.test(name)) {
+    return 'assets/images/[name][extname]'
+  }
+
+  if (/\.(mp4|webm|ogg|mov|avi|mkv)$/.test(name)) {
+    return 'assets/videos/[name][extname]'
+  }
+
+  if (/\.(woff2?|ttf|otf|eot)$/.test(name)) {
+    return 'assets/fonts/[name][extname]'
+  }
+
+  return 'assets/others/[name][extname]'
+}
+
 export default defineConfig(({ mode }) => {
   const isProd = mode === 'production'
 
@@ -69,6 +100,17 @@ export default defineConfig(({ mode }) => {
         `
         }
       }
+    },
+    build: {
+      rolldownOptions: {
+        output: {
+          assetFileNames,
+
+          chunkFileNames: 'assets/js/[name].js',
+
+          entryFileNames: 'assets/js/[name].js',
+        },
+      },
     },
   }
 })
