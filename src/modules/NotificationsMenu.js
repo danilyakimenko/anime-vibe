@@ -1,10 +1,10 @@
 class SearchMenu {
   selectors = {
-    dialog: '[data-js-search-menu-dialog]',
+    dialog: '[data-js-notifications-menu-dialog]',
     overlay: '[data-js-search-menu-overlay]',
-    searchMenuButton: '[data-js-search-menu-button]',
-    searchMenuInput: '[data-js-search-menu-input]',
-    searchMenuListItem: '[data-js-search-menu-list-item]',
+    notificationsMenuButton: '[data-js-notifications-menu-button]',
+    notificationsMenuListItem: '[data-js-notifications-menu-list-item]',
+    notificationsMenuResult: '[data-js-notifications-menu-result]',
   }
 
   stateClasses = {
@@ -15,9 +15,9 @@ class SearchMenu {
   constructor() {
     this.dialogElement = document.querySelector(this.selectors.dialog)
     this.overlayElement = document.querySelector(this.selectors.overlay)
-    this.searchMenuButtonElement = document.querySelector(this.selectors.searchMenuButton)
-    this.searchMenuInputElement = this.dialogElement.querySelector(this.selectors.searchMenuInput)
-    this.searchMenuListItemElements = this.dialogElement.querySelectorAll(this.selectors.searchMenuListItem)
+    this.notificationsMenuButtonElement = document.querySelector(this.selectors.notificationsMenuButton)
+    this.notificationsMenuListItemElements = this.dialogElement.querySelectorAll(this.selectors.notificationsMenuListItem)
+    this.notificationsMenuResultElement = this.dialogElement.querySelector(this.selectors.notificationsMenuResult)
     this.bindEvents()
   }
 
@@ -41,7 +41,7 @@ class SearchMenu {
     )
   }
 
-  onSearchMenuButtonClick = () => {
+  onNotificationsMenuButtonClick = () => {
     if (this.dialogElement.open) {
       this.close()
       return
@@ -53,12 +53,13 @@ class SearchMenu {
     this.close()
   }
 
-  onSearchMenuItemClick = (event) => {
+  onNotificationMenuItemClick = (event) => {
     const { target } = event
     const listItemValue = target.textContent.toLowerCase()
 
-    this.searchMenuInputElement.placeholder = `Search ${listItemValue}`
-    this.searchMenuListItemElements.forEach((item) => {
+    this.notificationsMenuResultElement.textContent =
+      `There are no new ${listItemValue === 'all' ? '' : listItemValue} notifications.`
+    this.notificationsMenuListItemElements.forEach((item) => {
       item.classList.remove(this.stateClasses.isActive)
     })
 
@@ -66,10 +67,10 @@ class SearchMenu {
   }
 
   bindEvents() {
-    this.searchMenuButtonElement.addEventListener('click', this.onSearchMenuButtonClick)
+    this.notificationsMenuButtonElement.addEventListener('click', this.onNotificationsMenuButtonClick)
     this.overlayElement.addEventListener('click', this.onOverlayClick)
-    this.searchMenuListItemElements.forEach((listItem) => {
-      listItem.addEventListener('click', this.onSearchMenuItemClick)
+    this.notificationsMenuListItemElements.forEach((listItem) => {
+      listItem.addEventListener('click', this.onNotificationMenuItemClick)
     })
   }
 }

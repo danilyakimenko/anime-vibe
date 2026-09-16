@@ -7,6 +7,7 @@ import menuItems from './items/menuItems'
 import searchItems from './items/searchItems'
 import { getUrl } from '@/utils/getUrl'
 import ScrollToTopButton from '@/components/ScrollToTopButton'
+import notificationsItems from '@/layouts/Header/items/notificationsItems'
 
 const Header = (props) => {
   const {
@@ -53,7 +54,7 @@ const Header = (props) => {
         <div className="header__wrapper">
           <div className="header__actions">
             <Button
-              className="header__button header__button--search"
+              className="header__button"
               label="Search"
               isLabelHidden
               mode="transparent"
@@ -68,6 +69,9 @@ const Header = (props) => {
               isLabelHidden
               mode="transparent"
               iconSrc="/src/assets/sprite/notifications.svg"
+              extraAttrs={{
+                'data-js-notifications-menu-button': ''
+              }}
             />
           </div>
           <BurgerButton
@@ -116,6 +120,31 @@ const Header = (props) => {
           >catalog
           </a>
         </div>
+      </dialog>
+      <dialog
+        className="header__notifications-menu-dialog notifications-menu"
+        data-js-notifications-menu-dialog=""
+      >
+        <h2 className="notifications-menu__title h6">Notifications</h2>
+        <ul className="notifications-menu__list">
+          {notificationsItems.map((notificationsItem, index) => (
+            <li
+              className={classNames("notifications-menu__item", {
+                'is-active': index === 0
+              })}
+              key={index}
+              data-js-notifications-menu-list-item=""
+            >
+              {notificationsItem}
+            </li>
+          ))}
+        </ul>
+        <span
+          className="notifications-menu__result"
+          data-js-notifications-menu-result=""
+        >
+          There are no new notifications.
+        </span>
       </dialog>
       <ScrollToTopButton />
     </header>)

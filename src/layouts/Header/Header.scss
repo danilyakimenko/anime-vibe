@@ -58,7 +58,6 @@
     transition-duration: var(--transition-duration);
     transition-behavior: allow-discrete;
 
-
     @include tablet-above {
       display: contents;
     }
@@ -73,7 +72,6 @@
 
       &[open] {
         display: flex;
-
 
         @starting-style {
           @include starting-styles;
@@ -120,8 +118,7 @@
     @include mobile {
       width: 90%;
     }
-
-
+    
     &[open] {
       opacity: 1;
       visibility: visible;
@@ -187,6 +184,75 @@
 
       &__link {
         color: var(--color-red-80);
+      }
+    }
+  }
+
+  &__notifications-menu-dialog {
+    position: fixed;
+    top: 75px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 480px;
+    height: 550px;
+    border: none;
+    border-radius: var(--border-radius-l);
+    background-color: var(--color-black-15);
+    color: var(--color-white);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.98);
+    transition-duration: var(--transition-duration);
+    z-index: 95;
+
+    @include mobile {
+      width: 90%;
+    }
+
+    &[open] {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+    }
+
+    .notifications-menu {
+      &__title {
+        text-align: center;
+      }
+
+      &__list {
+        padding-block: 15px;
+        border-block: var(--border-width-s) solid var(--color-black-30);
+        display: flex;
+        gap: 15px;
+        overflow-x: auto;
+        font-size: 16px;
+      }
+
+      &__item {
+        position: relative;
+
+        &.is-active {
+          &::after {
+            position: absolute;
+
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-red-60);
+            border-radius: var(--border-radius-l);
+            content: '';
+          }
+        }
+      }
+
+      &__result {
+        @include flex-center();
+
+        flex-grow: 1;
+        font-size: 16px;
       }
     }
   }
@@ -263,21 +329,13 @@
 
     @include tablet-above {
       justify-content: end;
-    }
-  }
-
-  &__button {
-    &--search {
-      z-index: 100;
-
-      @include tablet {
-        z-index: 0;
-      }
+      z-index: 90;
     }
   }
 
   &__burger-button {
     position: relative;
+
     @include tablet {
       z-index: 15;
     }

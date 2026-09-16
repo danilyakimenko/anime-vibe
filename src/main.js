@@ -1,6 +1,7 @@
 import Preloader from '@/modules/Preloader'
 import OverlayMenu from '@/modules/OverlayMenu'
 import SearchMenu from '@/modules/SearchMenu'
+import NotificationsMenu from '@/modules/NotificationsMenu'
 import ScrollToTopButton from '@/modules/ScrollToTopButton'
 import SliderCollection from '@/modules/SliderCollection'
 import TabsCollection from '@/modules/TabsCollection'
@@ -14,6 +15,7 @@ if (window.location.pathname === '/' || '/anime-vibe/') {
 }
 new OverlayMenu()
 new SearchMenu()
+new NotificationsMenu()
 new ScrollToTopButton()
 new SliderCollection()
 new TabsCollection()
