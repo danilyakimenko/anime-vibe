@@ -9,7 +9,7 @@ import VideoPlayerCollection from '@/modules/VideoPlayerCollection'
 import InputMaskCollection from '@/modules/InputMaskCollection'
 import SelectCollection from '@/modules/SelectCollection'
 
-// Запуск прелоадера только на главной странице
+// Запуск прелоадера только для главной странице
 if (window.location.pathname === '/' || '/anime-vibe/') {
   new Preloader()
 }

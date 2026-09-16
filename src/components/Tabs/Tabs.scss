@@ -6,7 +6,7 @@
   row-gap: 20px;
 
   &--enable-only-on-mobile {
-    @include mobile-above {
+    @include mobile {
       --tabsNonActiveContentDisplay: block;
       --tabsNavigationDisplay: none;
     }

@@ -71,7 +71,7 @@ export default defineConfig(({ mode }) => {
           background: undefined,
         },
         decoding: "async",
-        loading: "eager",
+        loading: "lazy",
       }),
       pluginSprite({
         config: {

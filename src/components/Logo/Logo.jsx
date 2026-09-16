@@ -18,7 +18,7 @@ const Logo = (props) => {
     >
       <img
         className="logo__image"
-        src="/src/assets/images/logo.svg"
+        src="/src/assets/images/logo/logo.svg"
         width="199"
         height="60"
         loading={loading}

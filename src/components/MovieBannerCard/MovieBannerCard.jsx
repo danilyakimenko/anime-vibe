@@ -19,6 +19,7 @@ const MovieBannerCard = (props) => {
     poster,
     isNegativeZIndex,
   } = props
+
   const playButtonTitle = 'Play video'
 
   return (

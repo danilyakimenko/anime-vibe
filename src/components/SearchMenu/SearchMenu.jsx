@@ -9,7 +9,6 @@ const SearchMenu = (props) => {
     extraAttrs,
   } = props
 
-
   return (
     <dialog
       className="search-menu"

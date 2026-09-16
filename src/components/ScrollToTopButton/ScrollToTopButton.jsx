@@ -1,6 +1,5 @@
 import './ScrollToTopButton.scss'
 
-
 const ScrollToTopButton = () => {
   return (
     <a

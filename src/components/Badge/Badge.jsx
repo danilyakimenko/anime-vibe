@@ -2,7 +2,6 @@ import './Badge.scss'
 import classNames from 'classnames'
 import Icon from '@/components/Icon'
 
-
 const Badge = (props) => {
   const {
     className,

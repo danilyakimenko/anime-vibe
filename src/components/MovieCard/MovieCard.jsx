@@ -73,7 +73,6 @@ const MovieCard = (props) => {
             </time>
           </Badge>
         )}
-
       </div>
     </a>
   )
