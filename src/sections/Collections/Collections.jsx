@@ -13,7 +13,6 @@ const Collections = () => {
     <Tabs
       className="collections container"
       title="collections"
-      isEnableOnlyOnMobile
       items={collectionItems.map((collectionItems) => ({
         isActive: collectionItems.isActive,
         title: collectionItems.title,

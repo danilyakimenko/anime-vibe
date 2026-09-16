@@ -1,16 +1,10 @@
 .tabs {
   --tabsBodyRowGap: 0;
   --tabsNonActiveContentDisplay: none;
+  --tabsNavigationDisplay: none;
 
   display: grid;
   row-gap: 20px;
-
-  &--enable-only-on-mobile {
-    @include mobile {
-      --tabsNonActiveContentDisplay: block;
-      --tabsNavigationDisplay: none;
-    }
-  }
 
   &__body {
     display: grid;

@@ -9,14 +9,11 @@ const Tabs = (props) => {
     title,
     items = [],
     navigationTargetElementId = null,
-    isEnableOnlyOnMobile = false,
   } = props
 
   return (
     <div
-      className={classNames(className, 'tabs', {
-        'tabs--enable-only-on-mobile': isEnableOnlyOnMobile,
-      })}
+      className={classNames(className, 'tabs',)}
       data-js-tabs={JSON.stringify({
         navigationTargetElementId,
       })}

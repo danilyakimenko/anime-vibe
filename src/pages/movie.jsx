@@ -2,7 +2,7 @@ import MovieBanner from '@/sections/MovieBanner'
 import MovieDetails from '@/sections/MovieDetails'
 import Seasons from '@/components/Seasons'
 import videoSrc from '@/assets/videos/placeholder.mp4'
-import posterSrc from '@/assets/images/posters/1.jpg'
+import posterSrc from '@/assets/images/posters/1.webp'
 
 export const metadata = {
   title: 'Chainsaw Man',
