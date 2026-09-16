@@ -1,12 +1,14 @@
 import './SearchMenu.scss'
 import classNames from 'classnames'
 import searchItems from '@/layouts/Header/items/searchItems'
-import { getUrl } from '@/utils/getUrl'
+import movieCards from '@/sections/MoviesBanner/items/movieCards'
+import SearchMenuCard from '@/components/SearchMenuCard'
 
 const SearchMenu = (props) => {
   const {
     extraAttrs,
   } = props
+
 
   return (
     <dialog
@@ -19,11 +21,12 @@ const SearchMenu = (props) => {
         placeholder="Search titles"
         data-js-search-menu-input=""
       />
+
       <ul className="search-menu__list">
         {searchItems.map((searchItem, index) => (
           <li
-            className={classNames("search-menu__item", {
-              'is-active': index === 0
+            className={classNames('search-menu__item', {
+              'is-active': index === 0,
             })}
             key={index}
             data-js-search-menu-list-item=""
@@ -32,19 +35,24 @@ const SearchMenu = (props) => {
           </li>
         ))}
       </ul>
-      <div className="search-menu__result">
-            <span className="search-menu__title">
-              An advanced search for titles is available in the
-            </span>&nbsp;
-        <a
-          className="search-menu__link"
-          href={getUrl("/movies")}
-          title="To Catalog"
-        >catalog
-        </a>
+
+      <div
+        className="search-menu__result"
+        data-js-search-menu-result=""
+      >
+        {movieCards.map((movieCard, index) => (
+          <div
+            className="search-menu__card"
+            data-js-search-menu-card=""
+            data-title={movieCard.title}
+            key={index}
+          >
+            <SearchMenuCard {...movieCard} />
+          </div>
+        ))}
       </div>
     </dialog>
   )
 }
 
-export default SearchMenu  
+export default SearchMenu

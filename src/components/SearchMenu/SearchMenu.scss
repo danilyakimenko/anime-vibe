@@ -6,7 +6,7 @@
   padding: 16px;
   top: 60px;
   width: 650px;
-  height: 300px;
+  max-height: 600px;
   border: none;
   border-radius: var(--border-radius-l);
   background-color: var(--color-black-15);
@@ -75,18 +75,22 @@
   }
 
   &__result {
-    @include flex-center;
-
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    height: auto;
     flex-grow: 1;
     background-color: var(--color-black-15);
     color: var(--color-white);
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overscroll-behavior: contain;
 
-    @include mobile {
-      flex-direction: column;
-    }
   }
 
   &__link {
     color: var(--color-red-60);
   }
+
 }
