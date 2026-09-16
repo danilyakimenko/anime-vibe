@@ -95,7 +95,9 @@ const Header = (props) => {
         <ul className="search-menu__list">
           {searchItems.map((searchItem, index) => (
             <li
-              className="search-menu__item"
+              className={classNames("search-menu__item", {
+                'is-active': index === 0
+              })}
               key={index}
               data-js-search-menu-list-item=""
             >

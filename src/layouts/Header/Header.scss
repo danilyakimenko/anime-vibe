@@ -58,6 +58,7 @@
     transition-duration: var(--transition-duration);
     transition-behavior: allow-discrete;
 
+
     @include tablet-above {
       display: contents;
     }
@@ -68,8 +69,11 @@
     }
 
     @include tablet {
+      z-index: 10;
+
       &[open] {
         display: flex;
+
 
         @starting-style {
           @include starting-styles;
@@ -265,10 +269,17 @@
   &__button {
     &--search {
       z-index: 100;
+
+      @include tablet {
+        z-index: 0;
+      }
     }
   }
 
   &__burger-button {
     position: relative;
+    @include tablet {
+      z-index: 15;
+    }
   }
 }
