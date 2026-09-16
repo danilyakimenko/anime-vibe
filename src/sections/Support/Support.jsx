@@ -26,7 +26,7 @@ const Support = () => {
         </div>
         <Image
           className="support__image"
-          src="/src/assets/images/general/bg.png"
+          src="/src/assets/images/general/bg.webp"
           width={400}
           height={400}
         />
