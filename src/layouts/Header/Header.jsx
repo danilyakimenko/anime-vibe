@@ -53,7 +53,7 @@ const Header = (props) => {
         <div className="header__wrapper">
           <div className="header__actions">
             <Button
-              className="header__button"
+              className="header__button header__button--search"
               label="Search"
               isLabelHidden
               mode="transparent"
@@ -64,7 +64,7 @@ const Header = (props) => {
             />
             <Button
               className="header__button"
-              label="Search"
+              label="Notifications"
               isLabelHidden
               mode="transparent"
               iconSrc="/src/assets/sprite/notifications.svg"
@@ -89,7 +89,7 @@ const Header = (props) => {
         <input
           className="search-menu__input"
           type="search"
-          placeholder="Seach titles"
+          placeholder="Search titles"
           data-js-search-menu-input=""
         />
         <ul className="search-menu__list">

@@ -1,6 +1,5 @@
 class SearchMenu {
   selectors = {
-    root: '[data-js-search-menu]',
     dialog: '[data-js-search-menu-dialog]',
     overlay: '[data-js-search-menu-overlay]',
     searchMenuButton: '[data-js-search-menu-button]',
@@ -17,20 +16,17 @@ class SearchMenu {
     this.rootElement = document.querySelector(this.selectors.root)
     this.dialogElement = document.querySelector(this.selectors.dialog)
     this.overlayElement = document.querySelector(this.selectors.overlay)
-    this.searchMenuButtonElement = document.querySelector(
-      this.selectors.searchMenuButton,
-    )
-
+    this.searchMenuButtonElement = document.querySelector(this.selectors.searchMenuButton)
+    this.searchMenuInputElement = this.dialogElement.querySelector(this.selectors.searchMenuInput)
+    this.searchMenuListItemElements = this.dialogElement.querySelectorAll(this.selectors.searchMenuListItem)
     this.bindEvents()
   }
 
   open = () => {
     this.dialogElement.show()
-
     this.overlayElement.classList.add(
       this.stateClasses.isActive,
     )
-
     document.documentElement.classList.add(
       this.stateClasses.isLock,
     )
@@ -38,11 +34,9 @@ class SearchMenu {
 
   close = () => {
     this.dialogElement.close()
-
     this.overlayElement.classList.remove(
       this.stateClasses.isActive,
     )
-
     document.documentElement.classList.remove(
       this.stateClasses.isLock,
     )
@@ -53,7 +47,6 @@ class SearchMenu {
       this.close()
       return
     }
-
     this.open()
   }
 
@@ -61,16 +54,24 @@ class SearchMenu {
     this.close()
   }
 
-  bindEvents() {
-    this.searchMenuButtonElement.addEventListener(
-      'click',
-      this.onSearchMenuButtonClick,
-    )
+  onSearchMenuItemClick = (event) => {
+    const { target } = event
+    const listItemValue = target.textContent.toLowerCase()
 
-    this.overlayElement.addEventListener(
-      'click',
-      this.onOverlayClick,
-    )
+    this.searchMenuInputElement.placeholder = `Search ${listItemValue}`
+    this.searchMenuListItemElements.forEach((item) => {
+      item.classList.remove(this.stateClasses.isActive)
+    })
+
+    target.classList.add(this.stateClasses.isActive)
+  }
+
+  bindEvents() {
+    this.searchMenuButtonElement.addEventListener('click', this.onSearchMenuButtonClick)
+    this.overlayElement.addEventListener('click', this.onOverlayClick)
+    this.searchMenuListItemElements.forEach((listItem) => {
+      listItem.addEventListener('click', this.onSearchMenuItemClick)
+    })
   }
 }
 
