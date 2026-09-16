@@ -72,9 +72,12 @@
   }
 
   &__play-button {
-    @include abs-center();
+    @include abs-cover();
     @include flex-center();
-    @include square(50px);
+
+    background-color: transparent;
+    border: none;
+    /*
 
     padding: 0;
     color: var(--color-white);
@@ -102,6 +105,19 @@
       &.icon {
         --iconSize: 30px;
       }
+    }*/
+
+    &-icon {
+      @include square(100px);
+      color:  var(--color-white);
+      opacity: 0.5;
+      padding: 10px;
+      border-radius: 50%;
+      background-color: color-mix(
+        in srgb,
+        var(--color-black) 60%,
+        transparent
+      );
     }
   }
 

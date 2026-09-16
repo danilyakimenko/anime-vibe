@@ -12,7 +12,7 @@ const menuItems = [
   {
     title: 'Shows',
     links: ['Genres', 'Trending', 'New Release', 'Popular'],
-    href: "/shows",
+    href: "/movie",
   },
   {
     title: 'Support',

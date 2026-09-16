@@ -5,7 +5,8 @@
   border-radius: var(--border-radius-l);
   overflow: hidden;
 
-  &__image {
+  &__image,
+  &__video {
     width: 100%;
     min-height: fluid(835, 468);
     max-height: 835px;
@@ -26,8 +27,13 @@
       var(--color-black-08) 0%,
       rgba(20, 20, 20, 0.00) 100%);
 
+
     @include mobile {
       padding-block: 16px;
+    }
+
+    &--negative-z-index {
+      z-index: -5;
     }
 
     &--small-padding-y {
@@ -58,6 +64,8 @@
   }
 
   &__play-button {
+    z-index: 100;
+
     @include mobile-s {
       width: 100%;
     }

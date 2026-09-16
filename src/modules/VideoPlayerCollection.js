@@ -36,8 +36,6 @@ class VideoPlayer {
     if (!isFullScreenEnabled) {
       this.videoElement.pause()
     }
-
-
   }
 
   bindEvents() {

@@ -35,12 +35,7 @@ const EpisodeCard = (props) => {
           aria-label={playButtonTitle}
           title={playButtonTitle}
           data-js-video-player-play-button=""
-        >
-          <Icon
-            className="episode-card__play-button-icon"
-            src="/src/assets/sprite/play-circle.svg"
-          />
-        </button>
+        />
       </div>
       <div className="episode-card__body">
         <div className="episode-card__info">
