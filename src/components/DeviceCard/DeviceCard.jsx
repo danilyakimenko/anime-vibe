@@ -1,6 +1,4 @@
 import './DeviceCard.scss'
-import { Image } from 'minista/assets'
-
 const DeviceCard = (props) => {
   const {
     title,
@@ -12,7 +10,7 @@ const DeviceCard = (props) => {
     <div className="device-card">
       <header className="device-card__header">
         <div className="device-card__image-wrapper">
-          <Image
+          <img
             className="device-card__image"
             src={imgSrc}
             alt=""
