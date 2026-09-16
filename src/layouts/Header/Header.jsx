@@ -4,10 +4,10 @@ import classNames from 'classnames'
 import Button from '@/components/Button'
 import BurgerButton from '@/components/BurgerButton'
 import menuItems from './items/menuItems'
-import searchItems from './items/searchItems'
 import { getUrl } from '@/utils/getUrl'
 import ScrollToTopButton from '@/components/ScrollToTopButton'
-import notificationsItems from '@/layouts/Header/items/notificationsItems'
+import SearchMenu from '@/components/SearchMenu'
+import NotificationsMenu from '@/components/NotificationsMenu'
 
 const Header = (props) => {
   const {
@@ -83,69 +83,19 @@ const Header = (props) => {
         </div>
       </div>
       <div
-        className="header__search-menu-overlay"
+        className="header__menu-overlay"
         data-js-search-menu-overlay=""
       />
-      <dialog
-        className="header__search-menu-dialog search-menu"
-        data-js-search-menu-dialog=""
-      >
-        <input
-          className="search-menu__input"
-          type="search"
-          placeholder="Search titles"
-          data-js-search-menu-input=""
-        />
-        <ul className="search-menu__list">
-          {searchItems.map((searchItem, index) => (
-            <li
-              className={classNames("search-menu__item", {
-                'is-active': index === 0
-              })}
-              key={index}
-              data-js-search-menu-list-item=""
-            >
-              {searchItem}
-            </li>
-          ))}
-        </ul>
-        <div className="search-menu__result">
-            <span className="search-menu__title">
-              An advanced search for titles is available in the
-            </span>&nbsp;
-          <a
-            className="search-menu__link"
-            href={getUrl("/movies")}
-            title="To Catalog"
-          >catalog
-          </a>
-        </div>
-      </dialog>
-      <dialog
-        className="header__notifications-menu-dialog notifications-menu"
-        data-js-notifications-menu-dialog=""
-      >
-        <h2 className="notifications-menu__title h6">Notifications</h2>
-        <ul className="notifications-menu__list">
-          {notificationsItems.map((notificationsItem, index) => (
-            <li
-              className={classNames("notifications-menu__item", {
-                'is-active': index === 0
-              })}
-              key={index}
-              data-js-notifications-menu-list-item=""
-            >
-              {notificationsItem}
-            </li>
-          ))}
-        </ul>
-        <span
-          className="notifications-menu__result"
-          data-js-notifications-menu-result=""
-        >
-          There are no new notifications.
-        </span>
-      </dialog>
+      <SearchMenu
+        extraAttrs={{
+          'data-js-search-menu-dialog': '',
+        }}
+      />
+      <NotificationsMenu
+        extraAttrs={{
+          'data-js-notifications-menu-dialog': '',
+        }}
+      />
       <ScrollToTopButton />
     </header>)
 }
