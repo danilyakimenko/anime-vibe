@@ -82,6 +82,17 @@
     }
   }
 
+  &__search-menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
+
   &__search-menu-dialog {
     position: fixed;
     display: flex;
@@ -98,9 +109,14 @@
     visibility: hidden;
     transform: translateY(-10px) scale(0.98);
     transition-duration: var(--transition-duration);
+    z-index: 95;
 
     @include mobile {
       width: 90%;
+    }
+
+    &::backdrop {
+      background-color: transparent;
     }
 
     &[open] {
@@ -130,6 +146,10 @@
         font-size: 16px;
         border-block: var(--border-width-s) solid var(--color-black-30);
         padding-block: 15px;
+
+        @include mobile {
+          overflow-x: auto;
+        }
       }
 
       &__result {
@@ -138,6 +158,10 @@
         flex-grow: 1;
         background-color: var(--color-black-15);
         color: var(--color-white);
+
+        @include mobile {
+          flex-direction: column;
+        }
       }
 
       &__link {
@@ -219,6 +243,10 @@
     @include tablet-above {
       justify-content: end;
     }
+  }
+
+  &__button {
+    z-index: 100;
   }
 
   &__burger-button {

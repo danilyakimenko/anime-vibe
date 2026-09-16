@@ -78,6 +78,10 @@ const Header = (props) => {
           />
         </div>
       </div>
+      <div
+        className="header__search-menu-overlay"
+        data-js-search-menu-overlay=""
+      />
       <dialog
         className="header__search-menu-dialog search-menu"
         data-js-search-menu-dialog=""
@@ -105,7 +109,7 @@ const Header = (props) => {
             </span>&nbsp;
           <a
             className="search-menu__link"
-            href="/movies"
+            href={getUrl("/movies")}
             title="To Catalog"
           >catalog
           </a>
