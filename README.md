@@ -512,11 +512,3 @@ AnimeVibe demonstrates practical experience with:
 * static site generation;
 * Vite-based tooling;
 * GitHub Pages deployment.
-
----
-
-## Author
-
-**Danil Yakimenko**
-
-Junior Frontend Developer focused on building responsive and maintainable web interfaces with JavaScript, JSX, Minista and SCSS.
