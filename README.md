@@ -25,20 +25,24 @@ The main focus during development was not only on visual implementation, but als
 The project includes the following pages:
 <div align="center">
 * **Home** — hero section, featured content, categories, collections and supported devices.
+      
 <img width="1996" height="5953" alt="Home" src="https://github.com/user-attachments/assets/22435570-3d4a-4634-8ef9-b11e749be2ad" />
 
 * **Movies** — movie catalog with banners, cards and filtering controls.
-* * <img width="1996" height="6375" alt="Movies" src="https://github.com/user-attachments/assets/9ad9fc69-b8cf-45df-93d9-5cef635177d1" />
+
+<img width="1996" height="6375" alt="Movies" src="https://github.com/user-attachments/assets/9ad9fc69-b8cf-45df-93d9-5cef635177d1" />
 
 * **Movie** — detailed movie information, genres, ratings, cast, reviews and episodes.
-* <img width="1996" height="7113" alt="Movie" src="https://github.com/user-attachments/assets/cfb744e0-db67-44a6-a0ca-2c2f5c8a6d93" />
+
+<img width="1996" height="7113" alt="Movie" src="https://github.com/user-attachments/assets/cfb744e0-db67-44a6-a0ca-2c2f5c8a6d93" />
 
 * **Subscriptions** — subscription plans and plan comparison.
-* <img width="1996" height="3333" alt="Subscriptions" src="https://github.com/user-attachments/assets/e348719b-951a-4481-ade1-9887c36d1178" />
+
+<img width="1996" height="3333" alt="Subscriptions" src="https://github.com/user-attachments/assets/e348719b-951a-4481-ade1-9887c36d1178" />
 
 * **Support** — support information and FAQ.
-<img width="1996" height="3139" alt="Support" src="https://github.com/user-attachments/assets/d84cfe2b-7ff4-4b1a-bba6-1e41792d6064" />
 
+<img width="1996" height="3139" alt="Support" src="https://github.com/user-attachments/assets/d84cfe2b-7ff4-4b1a-bba6-1e41792d6064" />
 </div>
 
 ---
