@@ -10,6 +10,16 @@ The project focuses on component-based UI development, reusable architecture, re
 
 ---
 
+
+## Commands
+
+npm install
+npm run dev      # http://127.0.0.1:5173
+npm run build    # прод-сборка в dist
+npm run preview  # локальный просмотр прод-сборки
+
+---
+
 ## Overview
 
 AnimeVibe is a frontend project that implements the interface of a modern anime streaming platform.
