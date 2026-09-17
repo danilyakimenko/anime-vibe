@@ -16,15 +16,15 @@ npm install
 
 <br>
 
-npm run dev      # http://127.0.0.1:5173
+npm run dev
 
 <br>
 
-npm run build    # прод-сборка в dist
+npm run build      # прод-сборка в dist
 
 <br>
 
-npm run preview  # локальный просмотр прод-сборки
+npm run preview      # локальный просмотр прод-сборки
 
 ---
 
