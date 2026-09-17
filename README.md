@@ -14,7 +14,7 @@ The project focuses on component-based UI development, reusable architecture, re
 
 AnimeVibe is a frontend project that implements the interface of a modern anime streaming platform.
 
-The application contains multiple pages and reusable UI elements such as movie cards, sliders, search, filters, tabs, accordions, subscription plans, ratings, reviews and a custom video player.
+The application contains multiple pages and reusable UI elements such as sliders, search, notifications popup, filters, tabs, accordions.
 
 The main focus during development was not only on visual implementation, but also on building a structured and reusable frontend architecture.
 
