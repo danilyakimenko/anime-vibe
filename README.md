@@ -20,11 +20,11 @@ npm run dev
 
 <br>
 
-npm run build      # прод-сборка в dist
+npm run build            # прод-сборка в dist
 
 <br>
 
-npm run preview      # локальный просмотр прод-сборки
+npm run preview            # локальный просмотр прод-сборки
 
 ---
 
