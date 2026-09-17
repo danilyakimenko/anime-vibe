@@ -38,8 +38,7 @@ The project includes the following pages:
 
 * **Minista** — static site generation and JSX-based component architecture
 * **JavaScript (ES6+)** — application logic and interactive functionality
-* **JSX** — component and page markup
-* **SCSS / Sass** — styling and responsive layouts
+* **SCSS** — styling and responsive layouts
 * **Vite** — development and build tooling
 
 ### Libraries
