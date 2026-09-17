@@ -26,7 +26,7 @@ The project includes the following pages:
 
 * **Home** — hero section, featured content, categories, collections and supported devices.
 * **Movies** — movie catalog with banners, cards and filtering controls.
-* **Movie Details** — detailed movie information, genres, ratings, cast, reviews and episodes.
+* **Movie** — detailed movie information, genres, ratings, cast, reviews and episodes.
 * **Subscriptions** — subscription plans and plan comparison.
 * **Support** — support information and FAQ.
 
