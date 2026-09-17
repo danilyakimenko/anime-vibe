@@ -23,7 +23,7 @@ The main focus during development was not only on visual implementation, but als
 ## Pages
 
 The project includes the following pages:
-
+<div align="center">
 * **Home** — hero section, featured content, categories, collections and supported devices.
 <img width="1996" height="5953" alt="Home" src="https://github.com/user-attachments/assets/22435570-3d4a-4634-8ef9-b11e749be2ad" />
 
@@ -39,7 +39,7 @@ The project includes the following pages:
 * **Support** — support information and FAQ.
 <img width="1996" height="3139" alt="Support" src="https://github.com/user-attachments/assets/d84cfe2b-7ff4-4b1a-bba6-1e41792d6064" />
 
-
+</div>
 
 ---
 
