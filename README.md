@@ -12,10 +12,18 @@ The project focuses on component-based UI development, reusable architecture, re
 
 
 ## Commands
-
 npm install
+
+<br>
+
 npm run dev      # http://127.0.0.1:5173
+
+<br>
+
 npm run build    # прод-сборка в dist
+
+<br>
+
 npm run preview  # локальный просмотр прод-сборки
 
 ---
