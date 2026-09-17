@@ -43,7 +43,7 @@ The project includes the following pages:
 
 ### Libraries
 
-* **Swiper** — sliders and carousels
+* **Swiper** — sliders
 * **IMask** — input masking
 * **classnames** — conditional CSS class management
 * **PostCSS** — CSS processing
@@ -52,7 +52,6 @@ The project includes the following pages:
 ### Deployment
 
 * **GitHub Pages**
-* **gh-pages**
 
 ---
 
